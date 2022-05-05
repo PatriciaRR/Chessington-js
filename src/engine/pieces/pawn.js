@@ -23,7 +23,7 @@ export default class Pawn extends Piece {
             let hasPieceInFront = board.getPiece(Square.at(location.row - 1, location.col));
             let hasPieceTwoInFront = board.getPiece(Square.at(location.row - 2, location.col));
             if (location.row < 6 && !hasPieceInFront){
-                array.push(Square.at(location.row - 1, location.col))
+                array.push(Square.at(location.row - 1, location.col)) 
             } else if (location.row === 6 && !hasPieceInFront) {
                 array.push(Square.at(location.row - 1, location.col));
                 if (!hasPieceTwoInFront){
@@ -35,3 +35,9 @@ export default class Pawn extends Piece {
         return array
     }
 }
+
+// if (!hasPieceInFront){
+//     array.push(Square.at(location.row - 1, location.col)) 
+// } else if 
+//     if (location.row === 6 && !hasPieceTwoInFront){
+//         array.push(Square.at(location.row - 2, location.col));
